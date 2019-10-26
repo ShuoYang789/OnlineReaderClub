@@ -21,14 +21,6 @@ describe('readers', () => {
         }
     });
 
-    after(async () => {
-        try {
-            await db.dropDatabase();
-        } catch (e) {
-            console.log(e);
-        }
-    });
-
     beforeEach(async () => {
         try {
             await Reader.deleteMany({});
@@ -66,6 +58,41 @@ describe('readers', () => {
                     .expect({message: 'Reader NOT Found!'});
             });
         });
+    });
+
+    describe('POST /readers', () => {
+        it('should return confirmation message and add a reader', function () {
+            const reader = {
+                username: 'Meng',
+                password: 'm77889'
+            };
+            return request(server)
+                .post('/readers')
+                .send(reader)
+                .expect(200)
+                .then(res => {
+                    expect(res.body).to.have.property("message", "Reader Added!");
+                });
+        });
+        after(() => {
+            return request(server)
+                .get('/readers/Meng')
+                .set("Accept", "application/json")
+                .expect("Content-Type", /json/)
+                .expect(200)
+                .then(res => {
+                    expect(res.body).to.have.property("username", "Meng");
+                    expect(res.body).to.have.property("password", "m77889");
+                });
+        });
+    });
+
+    after(async () => {
+        try {
+            await db.dropDatabase();
+        } catch (e) {
+            console.log(e);
+        }
     });
 });
 
