@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "_id": "5db4380fd14e441452df1ec5",
+      "bookname": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "ISBN": "0439023483",
+      "pubHouse": "Scholastic Press",
+      "pubDate": "Sep 14 2008",
+      "numOfPages": 374
+    }
+  ]
+}

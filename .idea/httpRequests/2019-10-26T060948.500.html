@@ -1,0 +1,19 @@
+<h1>Converting circular structure to JSON</h1>
+<h2></h2>
+<pre>TypeError: Converting circular structure to JSON
+    at JSON.stringify (&lt;anonymous&gt;)
+    at stringify (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/response.js:1119:12)
+    at ServerResponse.json (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/response.js:260:14)
+    at router.fuzzySearch (/Users/yilin/Web_App_Dev/readerclub/routes/books.js:49:9)
+    at Layer.handle [as handle_request] (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:365:14)
+    at Function.process_params (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:410:3)
+    at next (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:275:10)
+    at /Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:635:15
+    at next (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:260:14)
+    at Function.handle (/Users/yilin/Web_App_Dev/readerclub/node_modules/express/lib/router/index.js:174:3)</pre>
