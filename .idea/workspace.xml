@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d87ac5-3694-4d59-ba62-2da1e2f3cc5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/functional/api/readersTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T020617.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T020620.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/functional/api/apiTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/apiTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1354,7 +1347,7 @@
       <updated>1572026369793</updated>
       <workItem from="1572026370908" duration="9242000" />
       <workItem from="1572060778006" duration="5602000" />
-      <workItem from="1572088837505" duration="19689000" />
+      <workItem from="1572088837505" duration="20696000" />
     </task>
     <servers />
   </component>

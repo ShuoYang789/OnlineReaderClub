@@ -43,5 +43,29 @@ describe('readers', () => {
             console.log(e);
         }
     });
+
+    describe('GET /readers/:name', () => {
+        describe('when the name is valid', () => {
+            it('should return the matching reader', function () {
+                return request(server)
+                    .get('/readers/HuaHua')
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("username", "HuaHua");
+                        expect(res.body).to.have.property("password", "hh28379");
+                    });
+            });
+        });
+        describe('when the name is invalid', () => {
+            it('should return the NOT Found message', function () {
+                return request(server)
+                    .get('/readers/badName')
+                    .expect(200)
+                    .expect({message: 'Reader NOT Found!'});
+            });
+        });
+    });
 });
 
