@@ -116,6 +116,48 @@ describe('books test', () => {
         });
     });
 
+    describe('GET /books/:author/author', () => {
+        describe('when the author exists', () => {
+            it('should return all books of the author', function () {
+                return request(server)
+                    .get('/books/Suzanne Collins/author')
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.be.a("array");
+                        expect(res.body.length).to.equal(3);
+                        let result = _.map(res.body, book => {
+                            return {
+                                bookname: book.bookname,
+                                ISBN: book.ISBN
+                            };
+                        });
+                        expect(result).to.deep.include({
+                            bookname: 'The Hunger Games',
+                            ISBN: '0439023483'
+                        });
+                        expect(result).to.deep.include({
+                            bookname: 'Catching Fire',
+                            ISBN: '0439023491'
+                        });
+                        expect(result).to.deep.include({
+                            bookname: 'Mockingjay',
+                            ISBN: '0439023513'
+                        });
+                    });
+            });
+        });
+        describe('when the author does not exist', () => {
+            it('should return the NOT Found message', function () {
+                return request(server)
+                    .get('/books/badAuthor/author')
+                    .expect(200)
+                    .expect({message: 'Author NOT Found!'});
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
