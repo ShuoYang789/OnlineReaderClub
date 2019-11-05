@@ -88,6 +88,34 @@ describe('books test', () => {
         });
     });
 
+    describe('GET /books/:id', () => {
+        describe('when the ID is valid', () => {
+            it('should return the matching book', function () {
+                return request(server)
+                    .get(`/books/${testID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body[0]).to.have.property("bookname", "Mockingjay");
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Found message', function () {
+                return request(server)
+                    .get('/books/badID')
+                    .expect(200)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Book NOT Found!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
