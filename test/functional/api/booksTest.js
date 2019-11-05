@@ -177,6 +177,59 @@ describe('books test', () => {
         });
     });
 
+    describe('POST /books', () => {
+        it('should return confirmation message and add a book', function () {
+            const book = {
+                bookname: "Harry Potter and the Order of the Phoenix",
+                author: "J.K. Rowling",
+                ISBN: "0439358078",
+                pubHouse: "Scholastic Inc",
+                pubDate: "Sep 1 2004",
+                numOfPages: 870
+            };
+            return request(server)
+                .post('/books')
+                .send(book)
+                .expect(200)
+                .then(res => {
+                    expect(res.body).to.have.property("message", "Book Added!");
+                });
+        });
+        after(() => {
+            return request(server)
+                .get('/books')
+                .set("Accept", "application/json")
+                .expect("Content-Type", /json/)
+                .expect(200)
+                .then(res => {
+                    expect(res.body).to.be.a("array");
+                    expect(res.body.length).to.equal(4);
+                    let result = _.map(res.body, book => {
+                        return {
+                            bookname: book.bookname,
+                            ISBN: book.ISBN
+                        };
+                    });
+                    expect(result).to.deep.include({
+                        bookname: 'The Hunger Games',
+                        ISBN: '0439023483'
+                    });
+                    expect(result).to.deep.include({
+                        bookname: 'Catching Fire',
+                        ISBN: '0439023491'
+                    });
+                    expect(result).to.deep.include({
+                        bookname: 'Mockingjay',
+                        ISBN: '0439023513'
+                    });
+                    expect(result).to.deep.include({
+                        bookname: 'Harry Potter and the Order of the Phoenix',
+                        ISBN: '0439358078'
+                    });
+                });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
