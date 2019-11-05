@@ -61,9 +61,9 @@ router.incrementLikes = (req, res) => {
             review.likes += 1;
             review.save(function (err) {
                 if (err)
-                    res.send(JSON.stringify({message: 'Likes + 1!', errmsg: err}, null, 2));
+                    res.send(JSON.stringify({message: 'Likes NOT Changed!', errmsg: err}, null, 2));
                 else
-                    res.send(JSON.stringify({message: 'Likes NOT Changed!', data: review}, null, 2));
+                    res.send(JSON.stringify({message: 'Likes + 1!', data: review}, null, 2));
             });
         }
     });

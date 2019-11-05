@@ -164,6 +164,44 @@ describe('reviews test', () => {
         });
     });
 
+    describe('PUT /reviews/:id/likes', () => {
+        describe('when the ID is valid', () => {
+            it('should find the matching review and increment its likes by 1', function () {
+                return request(server)
+                    .put(`/reviews/${testID}/likes`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Likes + 1!");
+                        expect(res.body.data).to.have.property("likes", 1);
+                    });
+            });
+            after(() => {
+                return request(server)
+                    .get(`/reviews/${testID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body[0]).to.have.property("likes", 1);
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Found message', function () {
+                return request(server)
+                    .put('/reviews/badID/likes')
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Review NOT Found!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
