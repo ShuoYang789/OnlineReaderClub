@@ -51,7 +51,7 @@ router.fuzzySearch = (req, res) => {
             else {
                 arrayOfBookID.forEach((b) => {
                     Book.find({'_id': b._id}).then((book) => {
-                        console.log(book);
+                        //console.log(book);
                     });
                 });
                 res.json({message: 'OK!'});

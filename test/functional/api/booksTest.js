@@ -158,6 +158,25 @@ describe('books test', () => {
         });
     });
 
+    describe('GET /search/:keyword', () => {
+        describe('when the keyword can be found', () => {
+            it('should return the OK message', function () {
+                return request(server)
+                    .get('/search/h')
+                    .expect(200)
+                    .expect({message: 'OK!'});
+            });
+        });
+        describe('when the keyword cannot be found', () => {
+            it('should return the No Relevant Results message', function () {
+                return request(server)
+                    .get('/search/XXX')
+                    .expect(200)
+                    .expect({message: 'No Relevant Results!'});
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
