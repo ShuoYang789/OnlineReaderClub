@@ -87,6 +87,37 @@ describe('reviews test', () => {
         });
     });
 
+    describe('POST /reviews', () => {
+        let newID;
+        it('should return confirmation message and add a review', function () {
+            const review = {
+                readerNo: readerID,
+                bookNo: bookID,
+                content: 'I read it again!',
+                score: 5
+            };
+            return request(server)
+                .post('/reviews')
+                .send(review)
+                .expect(200)
+                .then(res => {
+                    expect(res.body).to.have.property("message", "Review Added!");
+                    newID = res.body.data._id;
+                });
+        });
+        after(() => {
+            return request(server)
+                .get(`/reviews/${newID}`)
+                .set("Accept", "application/json")
+                .expect("Content-Type", /json/)
+                .expect(200)
+                .then(res => {
+                    expect(res.body[0]).to.have.property("content", "I read it again!");
+                    expect(res.body[0]).to.have.property("score", 5);
+                });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
