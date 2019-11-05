@@ -10,7 +10,7 @@ let db;
 
 const mongodbUri = 'mongodb+srv://syang:ys1998@online-reader-club-cluster-edjlk.mongodb.net/test?retryWrites=true&w=majority'
 
-describe('readers', () => {
+describe('readers test', () => {
     before(async () => {
         try {
             mongoose.connect(mongodbUri);

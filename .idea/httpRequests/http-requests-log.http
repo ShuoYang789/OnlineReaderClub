@@ -1,3 +1,417 @@
+GET http://localhost:3000/search/hHH
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"newContent": "I think it is a great book!"}
+
+<> 2019-10-26T114503.200.json
+
+###
+
+GET http://localhost:3000/search/h
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"newContent": "I think it is a great book!"}
+
+<> 2019-10-26T114433.200.json
+
+###
+
+PUT http://localhost:3000/reviews/5db4cbbab3e60a1d8d82864b/likes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"newContent": "I think it is a great book!"}
+
+<> 2019-10-26T114324.200.json
+
+###
+
+PUT http://localhost:3000/reviews/5db4cbbab3e60a1d8d82864b/likes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"newContent": "I think it is a great book!"}
+
+<> 2019-10-26T114319.200.json
+
+###
+
+PUT http://localhost:3000/reviews/5db4cbbab3e60a1d8d82864b/content
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"newContent": "I think it is a great book!"}
+
+<> 2019-10-26T114305.200.json
+
+###
+
+POST http://localhost:3000/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"readerNo": "5db4c991b3e60a1d8d828643", "bookNo": "5db4caa8b3e60a1d8d828648", "content": "I love this book!", "score": 5}
+
+<> 2019-10-26T114202.200.json
+
+###
+
+GET http://localhost:3000/books/Suzanne%20Collins/author
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T114002.200.json
+
+###
+
+GET http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113924.200.json
+
+###
+
+DELETE http://localhost:3000/books/5db4cac5b3e60a1d8d82864a
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113916.200.json
+
+###
+
+GET http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113859.200.json
+
+###
+
+GET http://localhost:3000/books/5db4cac5b3e60a1d8d82864a
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113849.200.json
+
+###
+
+POST http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113757.200.json
+
+###
+
+POST http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Harry Potter and the Order of the Phoenix", "author": "J.K. Rowling", "ISBN": "0439358078", "pubHouse": "Scholastic Inc", "pubDate": "Sep 1 2004", "numOfPages": 870}
+
+<> 2019-10-26T113750.200.json
+
+###
+
+POST http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Mockingjay", "author": "Suzanne Collins", "ISBN": "0439023513", "pubHouse": "Scholastic Press", "pubDate": "Aug 24 2010", "numOfPages": 390}
+
+<> 2019-10-26T113729.200.json
+
+###
+
+POST http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "Catching Fire", "author": "Suzanne Collins", "ISBN": "0439023491", "pubHouse": "Scholastic Press", "pubDate": "Sep 01 2009", "numOfPages": 391}
+
+<> 2019-10-26T113710.200.json
+
+###
+
+POST http://localhost:3000/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"bookname": "The Hunger Games", "author": "Suzanne Collins", "ISBN": "0439023483", "pubHouse": "Scholastic Press", "pubDate": "Sep 14 2008", "numOfPages": 374}
+
+<> 2019-10-26T113643.200.json
+
+###
+
+DELETE http://localhost:3000/readers/5db4c9c3b3e60a1d8d828645
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c9c3b3e60a1d8d828645", "password": "123456"}
+
+<> 2019-10-26T113540.200.json
+
+###
+
+GET http://localhost:3000/readers/yilin
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c9c3b3e60a1d8d828645", "password": "123456"}
+
+<> 2019-10-26T113514.200.json
+
+###
+
+PUT http://localhost:3000/readers/psd
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c9c3b3e60a1d8d828645", "password": "123456"}
+
+<> 2019-10-26T113432.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "qianmeng", "password": "qm5656"}
+
+<> 2019-10-26T113339.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "xuepao", "password": "xp1234"}
+
+<> 2019-10-26T113323.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+<> 2019-10-26T113249.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+###
+
+PUT http://localhost:3000/readers/psd
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c7b03987651d1f1a1222", "password": "123456"}
+
+<> 2019-10-26T112652.200.json
+
+###
+
+GET http://localhost:3000/readers/yilinHH
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "qianmeng", "password": "qm5656"}
+
+<> 2019-10-26T112539.200.json
+
+###
+
+GET http://localhost:3000/readers/yilin
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "qianmeng", "password": "qm5656"}
+
+<> 2019-10-26T112533.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "qianmeng", "password": "qm5656"}
+
+<> 2019-10-26T112512.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "xuepao", "password": "xp1234"}
+
+<> 2019-10-26T112448.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+<> 2019-10-26T112412.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+###
+
+DELETE http://localhost:3000/readers/qianmeng
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c521bffd991c8ed01fc2", "password": "qm3344"}
+
+<> 2019-10-26T111647.200.json
+
+###
+
+GET http://localhost:3000/readers/yilinHH
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c521bffd991c8ed01fc2", "password": "qm3344"}
+
+<> 2019-10-26T111618.200.json
+
+###
+
+GET http://localhost:3000/readers/yilin
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c521bffd991c8ed01fc2", "password": "qm3344"}
+
+<> 2019-10-26T111611.200.json
+
+###
+
+PUT http://localhost:3000/readers/psd
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id": "5db4c521bffd991c8ed01fc2", "password": "qm3344"}
+
+<> 2019-10-26T111519.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "qianmeng", "password": "qm5656"}
+
+<> 2019-10-26T111353.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "xuepao", "password": "xp1234"}
+
+<> 2019-10-26T111333.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+<> 2019-10-26T111249.200.json
+
+###
+
+POST http://localhost:3000/readers
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username": "yilin", "password": "yilin789"}
+
+<> 2019-10-26T103436.200.json
+
+###
+
 GET http://localhost:3000/readers/yilin
 Accept: */*
 Cache-Control: no-cache
@@ -125,398 +539,6 @@ Content-Type: application/json
 {"newContent": "I think it is a great book!"}
 
 <> 2019-10-26T070523.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T070308.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T070225.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T070153.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T065801.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T065420.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T065315.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T065141.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064914.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064601.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064320.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064219.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064148.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T064120.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T063651.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T063605.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/HH
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T063407.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/J
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/HH
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/J
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T061636.200.json
-
-###
-
-GET http://localhost:3000/search/J
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T061411.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T061254.200.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T061055.500.html
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T060948.500.html
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T060915.500.json
-
-###
-
-GET http://localhost:3000/search/h
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/search/m
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/books/5db43840d14e441452df1ec8/reviews
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T045829.200.json
-
-###
-
-GET http://localhost:3000/books/ddd/reviews
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T042102.500.html
-
-###
-
-GET http://localhost:3000/books/ddd/reviews
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-###
-
-GET http://localhost:3000/books/ddd/reviews
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"newContent": "I think it is a great book!"}
-
-<> 2019-10-26T041248.200.json
 
 ###
 

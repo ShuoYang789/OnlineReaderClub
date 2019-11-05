@@ -1,21 +1,6 @@
 let Review = require('../models/reviews');
 let express = require('express');
 let router = express.Router();
-let mongoose = require('mongoose');
-
-var mongodbUri = 'mongodb+srv://syang:ys1998@online-reader-club-cluster-edjlk.mongodb.net/testdb?retryWrites=true&w=majority'
-
-mongoose.connect(mongodbUri);
-
-let db = mongoose.connection;
-
-db.on('error', function (err) {
-    console.log('Unable to Connect to [ testdb ]', err);
-});
-
-db.once('open', function () {
-    console.log('Successfully Connected to [ testdb ]');
-});
 
 router.findOne = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
