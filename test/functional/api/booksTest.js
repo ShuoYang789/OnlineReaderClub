@@ -230,6 +230,52 @@ describe('books test', () => {
         });
     });
 
+    describe('DELETE /books/:id', () => {
+        describe('when the ID is valid', () => {
+            it('should remove the matching book', function () {
+                return request(server)
+                    .delete(`/books/${testID}`)
+                    .expect(200)
+                    .expect({message: 'Book Successfully Deleted!'});
+            });
+            after(() => {
+                return request(server)
+                    .get('/books')
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.be.a("array");
+                        expect(res.body.length).to.equal(2);
+                        let result = _.map(res.body, book => {
+                            return {
+                                bookname: book.bookname,
+                                ISBN: book.ISBN
+                            };
+                        });
+                        expect(result).to.deep.include({
+                            bookname: 'The Hunger Games',
+                            ISBN: '0439023483'
+                        });
+                        expect(result).to.deep.include({
+                            bookname: 'Catching Fire',
+                            ISBN: '0439023491'
+                        });
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Deleted message', function () {
+                return request(server)
+                    .delete('/books/badID')
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Book NOT Deleted!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
