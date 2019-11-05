@@ -118,6 +118,52 @@ describe('reviews test', () => {
         });
     });
 
+    describe('PUT /reviews/:id/content', () => {
+        describe('when the ID is valid', () => {
+            it('should find the matching review and update its content', function () {
+                const review = {
+                    newContent: 'I think it is a great book!'
+                };
+                return request(server)
+                    .put(`/reviews/${testID}/content`)
+                    .send(review)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Review Updated!");
+                        expect(res.body.data).to.have.property("content", "I think it is a great book!");
+                    });
+            });
+            after(() => {
+                return request(server)
+                    .get(`/reviews/${testID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body[0]).to.have.property("content", "I think it is a great book!");
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Found message', function () {
+                const review = {
+                    newContent: 'I think it is a great book!'
+                };
+                return request(server)
+                    .put('/reviews/badID/content')
+                    .send(review)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Review NOT Found!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
