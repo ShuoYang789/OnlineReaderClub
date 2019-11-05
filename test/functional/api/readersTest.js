@@ -139,6 +139,33 @@ describe('readers test', () => {
         });
     });
 
+    describe('DELETE /readers/:id', () => {
+        describe('when the ID is valid', () => {
+            it('should remove the matching reader', function () {
+                return request(server)
+                    .delete(`/readers/${testID}`)
+                    .expect(200)
+                    .expect({message: 'Reader Successfully Deleted!'});
+            });
+            after(() => {
+                return request(server)
+                    .get('/readers/Jonathan18')
+                    .expect(200)
+                    .expect({message: 'Reader NOT Found!'});
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Deleted message', function () {
+                return request(server)
+                    .delete('/readers/badID')
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Reader NOT Deleted!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
