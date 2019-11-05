@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d87ac5-3694-4d59-ba62-2da1e2f3cc5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/functional/api/booksTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/readersTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/readersTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +23,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ShqqwZ99llxDkT8sEx6v0HMKV4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1345,7 +1348,7 @@
       <workItem from="1572026370908" duration="9242000" />
       <workItem from="1572060778006" duration="5602000" />
       <workItem from="1572088837505" duration="25587000" />
-      <workItem from="1572891495575" duration="6890000" />
+      <workItem from="1572891495575" duration="9128000" />
     </task>
     <servers />
   </component>
