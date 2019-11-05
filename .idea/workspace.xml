@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d87ac5-3694-4d59-ba62-2da1e2f3cc5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T041248.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T042102.500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T045829.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T060915.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T060948.500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T061055.500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T061254.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T061411.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T061636.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T063407.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T063605.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T063651.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064120.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064148.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064219.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064320.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064601.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T064914.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T065141.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T065315.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T065420.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T065801.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T070153.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T070225.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-26T070308.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/reviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/reviews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/apiTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/functional/api/readersTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/readersTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1373,7 +1345,7 @@
       <workItem from="1572026370908" duration="9242000" />
       <workItem from="1572060778006" duration="5602000" />
       <workItem from="1572088837505" duration="25587000" />
-      <workItem from="1572891495575" duration="2802000" />
+      <workItem from="1572891495575" duration="6129000" />
     </task>
     <servers />
   </component>

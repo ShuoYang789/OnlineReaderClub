@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 
 let server;
 let db;
+let testID;
 
 const mongodbUri = 'mongodb+srv://syang:ys1998@online-reader-club-cluster-edjlk.mongodb.net/test?retryWrites=true&w=majority'
 
@@ -28,9 +29,12 @@ describe('readers test', () => {
             reader.username = 'Jonathan18';
             reader.password = 'J102938';
             await reader.save();
+            reader = new Reader();
             reader.username = 'HuaHua';
             reader.password = 'hh28379';
             await reader.save();
+            reader = await Reader.findOne({username: 'Jonathan18'});
+            testID = reader._id;
         } catch (e) {
             console.log(e);
         }
@@ -84,6 +88,54 @@ describe('readers test', () => {
                     expect(res.body).to.have.property("username", "Meng");
                     expect(res.body).to.have.property("password", "m77889");
                 });
+        });
+    });
+
+    describe('PUT /readers/psd', () => {
+        describe('when the ID is valid', () => {
+            it('should find the matching reader and update its password', function () {
+                const reader = {
+                    id: testID,
+                    password: 'J10789'
+                };
+                return request(server)
+                    .put('/readers/psd')
+                    .send(reader)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Password Updated!");
+                        expect(res.body.data).to.have.property("password", "J10789");
+                    });
+            });
+            after(() => {
+                return request(server)
+                    .get('/readers/Jonathan18')
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("password", "J10789");
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Found message', function () {
+                const reader = {
+                    id: 'badID',
+                    password: 'J10789'
+                };
+                return request(server)
+                    .put('/readers/psd')
+                    .send(reader)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Reader NOT Found!");
+                    });
+            });
         });
     });
 
