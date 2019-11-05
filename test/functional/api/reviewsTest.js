@@ -202,6 +202,37 @@ describe('reviews test', () => {
         });
     });
 
+    describe('DELETE /reviews/:id', () => {
+        describe('when the ID is valid', () => {
+            it('should remove the matching review', function () {
+                return request(server)
+                    .delete(`/reviews/${testID}`)
+                    .expect(200)
+                    .expect({message: 'Review Successfully Deleted!'});
+            });
+            after(() => {
+                return request(server)
+                    .get(`/reviews/${testID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body.length).to.equal(0);
+                    });
+            });
+        });
+        describe('when the ID is invalid', () => {
+            it('should return the NOT Deleted message', function () {
+                return request(server)
+                    .delete('/reviews/badID')
+                    .expect(200)
+                    .then(res => {
+                        expect(res.body).to.have.property("message", "Review NOT Deleted!");
+                    });
+            });
+        });
+    });
+
     after(async () => {
         try {
             await db.dropDatabase();
