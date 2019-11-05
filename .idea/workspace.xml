@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d87ac5-3694-4d59-ba62-2da1e2f3cc5d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/booksTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/booksTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1347,7 +1348,7 @@
       <workItem from="1572026370908" duration="9242000" />
       <workItem from="1572060778006" duration="5602000" />
       <workItem from="1572088837505" duration="25587000" />
-      <workItem from="1572891495575" duration="12920000" />
+      <workItem from="1572891495575" duration="14401000" />
     </task>
     <servers />
   </component>

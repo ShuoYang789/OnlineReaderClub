@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "readers-test": "NODE_ENV=test mocha test/functional/api//readersTest.js --exit",
-    "books-test": "NODE_ENV=test mocha test/functional/api//booksTest.js --exit"
+    "books-test": "NODE_ENV=test mocha test/functional/api//booksTest.js --exit",
+    "reviews-test": "NODE_ENV=test mocha test/functional/api//reviewsTest.js --exit"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
