@@ -1,0 +1,4 @@
+file:
+    - ./test/functional/api/readersTest.js
+    - ./test/functional/api/booksTest.js
+    - ./test/functional/api/reviewsTest.js
